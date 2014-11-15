@@ -5,3 +5,31 @@
 li.jp-playlist-current {
   background-color: #D9EDF7;
 }
+
+div.jp-progress {
+  height: 13px;
+	overflow:hidden;
+  margin: 5px 0px;
+}
+
+div.jp-seek-bar {
+	width:0px;
+	height:100%;
+	cursor: pointer;
+  background-color: #D9EDF7;
+}
+
+div.jp-play-bar {
+	width:0px;
+	height:100%;
+  background-color: #428BCA;
+}
+
+.jp-current-time {
+  margin: 5px 0px;
+}
+
+.jp-playlist{
+  margin: 5px 0px;
+}
+
