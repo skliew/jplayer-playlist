@@ -45,6 +45,10 @@
                   <button href="javascript:;" class="btn btn-default jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off</button>
                   <button href="javascript:;" class="btn btn-default jp-repeat" tabindex="1" title="repeat">repeat</button>
                   <button href="javascript:;" class="btn btn-default jp-repeat-off" tabindex="1" title="repeat off">repeat off</button>
+                  <div id='playbackRateControl' class="form-inline" style="display: none">
+                    <select class="form-control" ng-model="playbackRate" ng-options="option + ' x' for option in playbackRateOptions" ng-change="updatePlaybackRate()">
+                    </select>
+                  </div>
                 </div>
                 <div class="jp-progress">
                   <div class="jp-seek-bar">

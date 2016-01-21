@@ -12,6 +12,10 @@ div.jp-progress {
   margin: 5px 0px;
 }
 
+#playbackRateControl {
+  margin: 0 5px;
+}
+
 div.jp-seek-bar {
 	width:0px;
 	height:100%;
