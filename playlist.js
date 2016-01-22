@@ -1,10 +1,8 @@
 function Playlist($scope) {
 
     $scope.playbackRateOptions = [
-      '1.00',
-      '1.25',
-      '1.50',
-      '2.00',
+      '1.00', '1.10', '1.15', '1.20', '1.25', '1.30', '1.35',
+      '1.40', '1.45', '1.50', '1.60', '1.75', '2.00'
     ];
     $scope.playbackRate = $scope.playbackRateOptions[0];
 
