@@ -6,15 +6,19 @@ function Playlist($scope) {
     ];
     $scope.playbackRate = $scope.playbackRateOptions[0];
 
+    $scope._addUrl = function(url) {
+      $scope.player.add({
+        title: url,
+        mp3:url,
+        free: true
+      });
+    };
+
     $scope.addUrl = function() {
         var url = $scope.newUrl;
         if (url) {
             $scope.newUrl = '';
-            $scope.player.add({
-                title: url,
-                mp3:url,
-                free: true
-            });
+            $scope._addUrl(url);
         }
     };
 
@@ -52,6 +56,11 @@ function Playlist($scope) {
         });
         $scope.jPlayer.bind($.jPlayer.event.loadstart + ".jPlayer", function(event) {
           $scope.updatePlaybackRate();
+        });
+        $('#droppable-textarea').on("drop", function(e) {
+          e.preventDefault();
+          var url = e.originalEvent.dataTransfer.getData("text/plain");
+          $scope._addUrl(url);
         });
     });
 }

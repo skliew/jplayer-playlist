@@ -37,3 +37,7 @@ div.jp-play-bar {
   margin: 5px 0px;
 }
 
+#droppable-textarea {
+  resize: none;
+}
+
