@@ -58,7 +58,7 @@ function Playlist($scope) {
           $scope.updatePlaybackRate();
         });
         $('#droppable').on("drop", function(e) {
-          console.log('Dropped');
+          $(this).removeClass('dragover');
           e.preventDefault();
           var url = e.originalEvent.dataTransfer.getData("text/plain");
           $scope._addUrl(url);
