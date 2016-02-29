@@ -37,7 +37,27 @@ div.jp-play-bar {
   margin: 5px 0px;
 }
 
-#droppable-textarea {
-  resize: none;
+#droppable {
+  height: 80px;
+  line-height: 70px;
+  border-radius: 3px;
 }
+
+#droppable-text {
+  text-align: center;
+  vertical-align: middle;
+  color: #999;
+}
+
+#droppable.dragover {
+  height: 80px;
+  border-radius: 3px;
+  color: #999;
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+
+}
+
 

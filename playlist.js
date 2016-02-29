@@ -57,10 +57,17 @@ function Playlist($scope) {
         $scope.jPlayer.bind($.jPlayer.event.loadstart + ".jPlayer", function(event) {
           $scope.updatePlaybackRate();
         });
-        $('#droppable-textarea').on("drop", function(e) {
+        $('#droppable').on("drop", function(e) {
+          console.log('Dropped');
           e.preventDefault();
           var url = e.originalEvent.dataTransfer.getData("text/plain");
           $scope._addUrl(url);
+        });
+        $('#droppable').on("dragover", function(e) {
+          $(this).addClass('dragover');
+        });
+        $('#droppable').on("dragleave", function(e) {
+          $(this).removeClass('dragover');
         });
     });
 }
